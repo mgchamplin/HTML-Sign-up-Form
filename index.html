@@ -14,18 +14,29 @@
             <h2>Vacation Contest Sign-Up Form</h2>
             <form method="get" action="results.html"> <!-- TODO: Set Action and Method Properties -->
                 <div>
+                    <span class="required-field">*</span>
                     <label for="firstname">Your First Name: </label>
-                    <input type="text" id="firstname" name="firstname">
+                    <input type="text" id="firstname" name="firstname" minlength="2" maxlength="35" required>
                     <br>
+                    <span class="required-field">*</span>
                     <label for="lastname">Your Last Name: </label>
-                    <input type="text" id="lastname" name="lastname">
+                    <input type="text" id="lastname" name="lastname" minlength="2" maxlength="35" required>
+                    <br>
+                    <span class="required-field">*</span>
+                    <label for="passcode">Your Secret Passcode: </label>
+                    <input type="password" id="passcode" name="passcode" required pattern="[0-9,a-z,A-Z]{6}" title = "Please Enter a 6-Alphanumeric Character Passcode">
+                    <br>
+                    <span class="required-field">*</span>
+                    <label for="age">Your Age:   </label>
+                    <input type="number" name="age" id="age" min="21" max="121" required>   
+                    <h5>MUST BE AGE 21+ TO PLAY</h5>
                 </div>
     
                     <fieldset>
                         <legend>Your Contact Info</legend>
-
+                        <span class="required-field">*</span>
                         <label for="email">Your Email: </label><br>
-                        <input type="text" id="email" name="email">
+                        <input type="email" id="email" name="email" required>
                         <br><br>
                         <label for="address">Your Street Address: </label><br>
                         <input type="text" id="address" name="address">
@@ -43,7 +54,7 @@
                             <option value=WA>Washington</option>
                         </select><br><br>
                         <label for="zip">Your Zip Code: </label><br>
-                        <input type="text" id="zip" name="zip">
+                        <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title = "Please Enter a 5-Digit ZipCode">
                         <br><br>
                     </fieldset>
 
