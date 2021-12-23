@@ -1,39 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vacation Time!</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <nav>
-        Enter the Contest for the Vacation of a Lifetime
-    </nav>
-    <main>
-        <h2>Vacation Contest Sign-Up Form</h2>
-        <form> <!-- TODO: Set Action and Method Properties -->
-            <div>
-                <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
-                <!-- TODO: Create a "lastname" input with type "text" -->
-            </div>
-            <!-- TODO: Make fieldset and legend -->
-            <!-- Todo: Email Input -->
-            <!-- Todo: Street Address Input -->
-            <!-- Todo: City, State, and Zip Inputs -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vacation Time!</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <nav>
+            Enter the Contest for the Vacation of a Lifetime
+        </nav>
+        <main>
+            <h2>Vacation Contest Sign-Up Form</h2>
+            <form method="get" action="results.html"> <!-- TODO: Set Action and Method Properties -->
+                <div>
+                    <label for="firstname">Your First Name: </label>
+                    <input type="text" id="firstname" name="firstname">
+                    <br>
+                    <label for="lastname">Your Last Name: </label>
+                    <input type="text" id="lastname" name="lastname">
+                </div>
+    
+                    <fieldset>
+                        <legend>Your Contact Info</legend>
 
-            <!-- TODO: Second fieldset -->
-            <!-- TODO: Radio buttons for selecting preferred destination -->
-            <!-- TODO: Color input for selecting favorite color -->
-            <!-- TODO: Checkboxes for selecting extra add-ons -->
-            
-            <!-- TODO: Submit Button -->
-        </form>
-    </main>
-    <footer>
-        <h2>Resource Attributions</h2>
-        <p>All images provided for free use via <a href="https://unsplash.com/">Unsplash.com</a> whose generous <a href="https://unsplash.com/license">license details can be found here</a>.</p>
-    </footer>
-</body>
+                        <label for="email">Your Email: </label><br>
+                        <input type="text" id="email" name="email">
+                        <br><br>
+                        <label for="address">Your Street Address: </label><br>
+                        <input type="text" id="address" name="address">
+                        <br><br>
+                        <label for="city">Your City: </label><br>
+                        <input type="text" id="city" name="city">
+                        <br><br>
+                        <label for="state">Your State: </label><br>
+                        <select name="state" id="state"><br>
+                            <option value=AK>Alaska</option>
+                            <option value=AZ>Arizona</option>
+                            <option value=CA>California</option>
+                            <option value=OR>Oregon</option>
+                            <option value=NV>Nevada</option>
+                            <option value=WA>Washington</option>
+                        </select><br><br>
+                        <label for="zip">Your Zip Code: </label><br>
+                        <input type="text" id="zip" name="zip">
+                        <br><br>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Your Preferences</legend>
+                        <h3>Choose your location</h3>
+                        <div>
+                            <input type="radio" id="aruba" name="location" value="Aruba" checked> 
+                            <label for="aruba">Aruba</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="japan" name="location" value="Japan"> 
+                            <label for="japan">Japan</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="reykjavik" name="location" value="Reykjavik"> 
+                            <label for="reykjavik">Reykjavik</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="new-zealand" name="location" value="New Zealand"> 
+                            <label for="new-zealand">New Zealand</label>
+                        </div>
+                        <br><br>
+                    </fieldset>
+
+                    <label for="fav-color">Your Favorite Color: </label><br>
+                    <input type="color" id="fav-color" name="color">
+                    <br><br>
+
+                    <fieldset>
+                        <legend>Extras</legend>
+                        <h3>Select Premium Options</h3>
+                        <div>
+                            <input type="checkbox" id="sauna" name="extras" value="Sauna" checked> 
+                            <label for="sauna">Sauna</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="massage" name="extras" value="Massage"> 
+                            <label for="massage">Massage</label>
+                        </div> 
+                        <div>
+                            <input type="checkbox" id="bigtv" name="extras" value="80inch TV"> 
+                            <label for="bigtv">80inch TV</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="ocean" name="extras" value="Ocean View"> 
+                            <label for="ocean">Ocean View</label>
+                        </div>
+                        <br><br>
+                    </fieldset>
+
+                    <input type="submit" id="submitit" name="submitit" value="Enter The Contest"> 
+                </form>
+
+                
+                <!-- TODO: Submit Button -->
+            </form>
+        </main>
+        <footer>
+            <h2>Resource Attributions</h2>
+            <p>All images provided for free use via <a
+                    href="https://unsplash.com/">Unsplash.com</a> whose generous
+                <a href="https://unsplash.com/license">license details can be
+                    found here</a>.</p>
+        </footer>
+    </body>
 </html>

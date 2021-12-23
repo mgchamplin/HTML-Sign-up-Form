@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Results Page</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <main>
-        <h1>🍹🏄‍♀️ Contest Results 🏄‍♀️🍹</h1>
-        <div>
-            <h2 id="status-message"></h2>
-            <h3 id="sub-message"></h3>
-            <img src="assets/images/aruba.jpg" class="mini-image">
-            <h4 id="small-print"></h4>
-            <h5 id="disclaimer"></h5>
-            <div id="address1"></div>
-            <div id="address2"></div>
-        </div>
-    </main>
-    <script type="text/javascript">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Results Page</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <main>
+            <h1>🍹🏄‍♀️ Contest Results 🏄‍♀️🍹</h1>
+            <div>
+                <h2 id="status-message"></h2>
+                <h3 id="sub-message"></h3>
+                <img src="assets/images/aruba.jpg" class="mini-image">
+                <h4 id="small-print"></h4>
+                <h5 id="disclaimer"></h5>
+                <div id="address1"></div>
+                <div id="address2"></div>
+            </div>
+        </main>
+        <script type="text/javascript">
         // Grab the URL parameters
         var urlParams = new URLSearchParams(window.location.search);
 
@@ -33,6 +33,8 @@
         let extras = urlParams.getAll('extras')
         let email = urlParams.get('email') 
         let address = urlParams.get('address') 
+        let USstate = urlParams.get('state')
+
         let cityStateZip = `${urlParams.get('city')}, ${urlParams.get('state')} ${urlParams.get('zip')}`
         let emailMessage = document.createElement('p')
         
@@ -67,5 +69,5 @@
             document.getElementById('small-print').textContent = 'Better luck next time!'
         }
     </script>
-</body>
+    </body>
 </html>
